@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="author">- %s</string>
+    <string name="zenquotes_io">Inspirational quotes provided by <![CDATA[<a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>]]></string>
+</resources>

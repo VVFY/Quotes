@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="quote_side_spacing">100dp</dimen>
+
+    <dimen name="text_size_H1">30sp</dimen>
+</resources>

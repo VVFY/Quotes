@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Quote" parent="Base.Theme.Quote" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Quote" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_white</item>
+        <item name="colorPrimaryVariant">@color/color_white_porcelain</item>
+
+        <item name="colorSecondary">@color/color_royal_purple</item>
+        <item name="colorSecondaryVariant">@color/color_northwestern_purple</item>
+
+        <item name="android:colorBackground">@color/color_rose_white</item>
+        <item name="colorSurface">@color/color_rose_white</item>
+        <item name="colorError">@color/color_red_200</item>
+
+        <item name="colorOnPrimary">@color/color_black</item>
+        <item name="colorOnSecondary">@color/color_white</item>
+        <item name="colorOnBackground">@color/color_black</item>
+        <item name="colorOnSurface">@color/color_black</item>
+        <item name="colorOnError">@color/color_red_600</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+
+        <!--Typography-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Quotex.Quicksand.Light.H1</item>
+    </style>
+</resources>

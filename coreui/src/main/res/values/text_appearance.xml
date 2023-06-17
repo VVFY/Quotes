@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TextAppearance-->
+    <style name="TextAppearance.Quotex" parent="TextAppearance.AppCompat" />
+
+    <!--Font-->
+    <style name="TextAppearance.Quotex.Quicksand" />
+
+    <!--Font styles-->
+    <style name="TextAppearance.Quotex.Quicksand.Light">
+        <item name="fontFamily">@font/quicksand_light</item>
+    </style>
+
+    <!--Quicksand-Light: Sizes -->
+    <style name="TextAppearance.Quotex.Quicksand.Light.H1">
+        <item name="android:textSize">@dimen/text_size_H1</item>
+    </style>
+</resources>

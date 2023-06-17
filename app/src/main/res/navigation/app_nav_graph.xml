@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <include app:graph="@navigation/quotes_nav_graph" />
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.vvfy.quotes.SplashFragment"
+        android:label="SplashFragment" />
+</navigation>

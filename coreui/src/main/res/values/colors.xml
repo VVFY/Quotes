@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_rose_white">#FFFAFA</color>
+    <color name="color_white_alpha50">#80FFFFFF</color>
+    <color name="color_white_porcelain">#EDEEEF</color>
+    <color name="color_black">#FF000000</color>
+    <color name="color_black_alpha50">#40000000</color>
+
+    <color name="color_royal_purple">#7851A9</color>
+    <color name="color_northwestern_purple">#5B3B8C</color>
+
+    <color name="color_red_200">#cf6679</color>
+    <color name="color_red_600">#b00020</color>
+
+    <color name="color_purple_500">#FF6200EE</color>
+    <color name="color_red_500">#F44336</color>
+    <color name="color_pink_500">#E91E63</color>
+    <color name="color_indigo_500">#3F51B5</color>
+    <color name="color_cyan_500">#00BCD4</color>
+    <color name="color_teal_500">#009688</color>
+    <color name="color_orange_500">#FF9800</color>
+    <color name="color_brown_500">#795548</color>
+
+    <array name="quote_backgrounds">
+        <item>@color/color_purple_500</item>
+        <item>@color/color_red_500</item>
+        <item>@color/color_pink_500</item>
+        <item>@color/color_indigo_500</item>
+        <item>@color/color_cyan_500</item>
+        <item>@color/color_teal_500</item>
+        <item>@color/color_orange_500</item>
+        <item>@color/color_brown_500</item>
+    </array>
+</resources>

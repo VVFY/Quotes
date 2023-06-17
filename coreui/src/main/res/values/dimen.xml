@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_button_padding">20dp</dimen>
+    <dimen name="quote_side_spacing">20dp</dimen>
+
+    <dimen name="space_20">20dp</dimen>
+
+    <dimen name="text_size_H1">20sp</dimen>
+</resources>
