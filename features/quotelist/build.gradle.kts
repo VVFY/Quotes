@@ -35,6 +35,10 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.7"
     }
 }
 
@@ -56,4 +60,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    //val composeBom = platform("androidx.compose:compose-bom:2023.04.01")
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.runtime)
+    // or Material Design 2
+    implementation(libs.compose.material)
+    // Android Studio Preview support
+    implementation(libs.compose.uitooling.preview)
+    debugImplementation(libs.compose.uitooling)
 }
