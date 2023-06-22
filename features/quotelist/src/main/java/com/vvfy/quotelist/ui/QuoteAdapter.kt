@@ -2,12 +2,14 @@ package com.vvfy.quotelist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.vvfy.quotelist.R
-import com.vvfy.quotelist.ui.vo.QuoteWithColor
 import com.vvfy.quotelist.databinding.QuoteItemBinding
+import com.vvfy.quotelist.ui.components.QuoteContent
+import com.vvfy.quotelist.ui.vo.QuoteWithColor
 
 class QuoteAdapter : ListAdapter<QuoteWithColor, QuoteAdapter.QuoteViewHolder>(DIFF_CALLBACK) {
 
@@ -24,10 +26,13 @@ class QuoteAdapter : ListAdapter<QuoteWithColor, QuoteAdapter.QuoteViewHolder>(D
         private val binding: QuoteItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: QuoteWithColor) {
-            with(binding) {
-                quoteText.text = item.quote
-                author.text = root.context.getString(R.string.author, item.author)
-                root.setBackgroundColor(root.context.getColor(item.backgroundColor))
+            with(binding.composeView) {
+                setContent {
+                    QuoteContent(
+                        quote = item,
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
             }
         }
     }
