@@ -65,6 +65,7 @@ preference-datastore = { group = "androidx.datastore", name = "datastore-prefere
 
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom"}
 compose-runtime = { module = "androidx.compose.runtime:runtime"}
+compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose"}
 compose-material = { module = "androidx.compose.material:material"}
 compose-uitooling = { module = "androidx.compose.ui:ui-tooling"}
 compose-uitooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"}
@@ -89,3 +90,4 @@ org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org
 [bundles]
 network = ["okhttp", "okhttp-logging", "retrofit", "moshi", "moshi-converter", "moshi-adapters"]
 room = ["room-runtime", "room-ktx"]
+compose = ["compose-runtime", "compose-lifecycle", "compose-material", "compose-uitooling-preview"]
