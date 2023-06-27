@@ -3,10 +3,10 @@ package com.vvfy.quotelist.ui.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -51,12 +51,14 @@ fun QuoteContent(
             fontFamily = fontFamily,
             fontSize = dimensionResource(id = R.dimen.text_size_H1).value.sp,
             modifier = arrangementModifier,
+            color = MaterialTheme.colors.primary
         )
 
         Text(
             text = stringResource(id = com.vvfy.quotelist.R.string.author, quote.author),
             textAlign = TextAlign.Center,
             fontFamily = fontFamily,
+            color = MaterialTheme.colors.primary,
             modifier = arrangementModifier
                 .padding(top = dimensionResource(id = R.dimen.space_20))
         )

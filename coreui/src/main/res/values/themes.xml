@@ -21,9 +21,5 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">false</item>
-
-
-        <!--Typography-->
-        <item name="textAppearanceHeadline1">@style/TextAppearance.Quotex.Quicksand.Light.H1</item>
     </style>
 </resources>
