@@ -10,3 +10,4 @@ An old pet project in view system with upgraded dependencies, brought back into 
 * Fix minor bug in Event class, which was not letting event marked as used.
 * Weird issue: ThemeAdapter version used in this change is not picking up font (other than in textAppearanceHeadline1) when typography is customized through xml theme. May be it is the issue with downloadable fonts with compose. Will be resolved later.
 * Previous appCompat textAppearance cleanup.
+* Add SplashFragment content to composeView.
