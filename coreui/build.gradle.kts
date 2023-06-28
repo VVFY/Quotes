@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
+    api(libs.material2.theme.adapter)
 
     api(platform(libs.compose.bom))
     api(libs.bundles.compose)

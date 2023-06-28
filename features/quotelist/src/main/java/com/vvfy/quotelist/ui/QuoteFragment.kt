@@ -6,6 +6,7 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import com.google.accompanist.themeadapter.material.MdcTheme
 import com.vvfy.coreui.BaseFragment
 import com.vvfy.coreui.viewBinding
 import com.vvfy.quotelist.R
@@ -37,10 +38,11 @@ class QuoteFragment : BaseFragment(R.layout.quote_fragment) {
         with(binding.composeQuoteRoot) {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                QuoteScreen(viewModel = quoteViewModel)
+                MdcTheme {
+                    QuoteScreen(viewModel = quoteViewModel)
+                }
             }
         }
-
         state.error?.showSnackBar()
     }
 }

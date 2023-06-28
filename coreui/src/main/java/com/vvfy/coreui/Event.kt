@@ -21,6 +21,7 @@ class Event<out T>(private val content: T) {
      */
     fun use(block: (T) -> Unit) {
         if (!used && content != null) {
+            used = true
             block(content)
         }
     }
