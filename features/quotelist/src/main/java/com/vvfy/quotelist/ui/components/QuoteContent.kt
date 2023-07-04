@@ -9,19 +9,13 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
-import androidx.core.content.res.ResourcesCompat
 import com.vvfy.coreui.R
-import com.vvfy.coreui.components.QuicksandText
 import com.vvfy.quotelist.ui.vo.QuoteWithColor
 
 @Composable
@@ -40,17 +34,18 @@ fun QuoteContent(
             .wrapContentHeight()
             .padding(horizontal = dimensionResource(id = R.dimen.quote_side_spacing))
 
-        QuicksandText(
+        Text(
             text = quote.quote,
             textAlign = TextAlign.Center,
-            fontSize = dimensionResource(id = R.dimen.text_size_H1).value.sp,
+            style = MaterialTheme.typography.h6,
             color = MaterialTheme.colors.primary,
             modifier = arrangementModifier
         )
 
-        QuicksandText(
+        Text(
             text = stringResource(id = com.vvfy.quotelist.R.string.author, quote.author),
             textAlign = TextAlign.Center,
+            style = MaterialTheme.typography.subtitle1,
             color = MaterialTheme.colors.primary,
             modifier = arrangementModifier
                 .padding(top = dimensionResource(id = R.dimen.space_20))
