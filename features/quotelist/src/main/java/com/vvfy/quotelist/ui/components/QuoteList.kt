@@ -3,7 +3,6 @@ package com.vvfy.quotelist.ui.components
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.VerticalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.vvfy.quotelist.ui.vo.QuoteWithColor
@@ -16,7 +15,7 @@ fun QuoteList(
 ) {
     VerticalPager(
         modifier = modifier,
-        state = rememberPagerState { list.size },
+        pageCount = list.size,
     ) {
         QuoteContent(
             quote = list[it],
