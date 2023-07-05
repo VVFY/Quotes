@@ -2,7 +2,7 @@ package com.vvfy.quotelist.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vvfy.coreui.toEvent
+import com.vvfy.coreui.Message
 import com.vvfy.domain.usecase.GetQuoteListUseCase
 import com.vvfy.domain.usecase.RefreshQuoteListUseCase
 import com.vvfy.quotelist.utils.toQuotesWithColor
@@ -40,7 +40,7 @@ class QuoteViewModel @Inject constructor(
                 _state.update { it.copy(isLoading = true) }
                 refreshQuoteListUseCase(forceRefresh)
                     .onSuccess { _state.update { it.copy(isLoading = false) } }
-                    .onError { t -> _state.update { it.copy(isLoading = false, error = t?.message.toEvent()) } }
+                    .onError { t -> _state.update { it.copy(isLoading = false, error = Message(t?.message)) } }
             }
             .also { quotesJob = it }
     }
@@ -50,6 +50,12 @@ class QuoteViewModel @Inject constructor(
             .map { it.toQuotesWithColor() }
             .onEach { list -> _state.update { it.copy(quoteList = list) } }
             .launchIn(viewModelScope)
+    }
+
+    fun errorShown() {
+        _state.update {
+            it.copy(error = null)
+        }
     }
 }
 

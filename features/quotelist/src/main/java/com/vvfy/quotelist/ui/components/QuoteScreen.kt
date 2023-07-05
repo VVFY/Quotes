@@ -27,13 +27,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vvfy.coreui.clickableText
 import com.vvfy.coreui.components.ClickableUrlText
+import com.vvfy.coreui.components.PlainSnackbar
 import com.vvfy.quotelist.R
 import com.vvfy.quotelist.ui.QuoteViewModel
 
 @Composable
 fun QuoteScreen(
     viewModel: QuoteViewModel,
-    modifier: Modifier = Modifier
 ) {
     val uiState by viewModel.state.collectAsStateWithLifecycle()
     val context = LocalContext.current
@@ -46,7 +46,8 @@ fun QuoteScreen(
             )
         )
     }
-    Box(modifier = modifier) {
+
+    Box {
         QuoteList(
             list = uiState.quoteList,
             modifier = Modifier.fillMaxSize()
@@ -85,5 +86,14 @@ fun QuoteScreen(
                 .align(Alignment.BottomEnd)
                 .padding(end = 8.dp, bottom = 20.dp)
         )
+
+        PlainSnackbar(
+            modifier = Modifier
+                .windowInsetsPadding(WindowInsets.navigationBars)
+                .align(Alignment.BottomCenter),
+            message = uiState.error,
+            onSnackbarShown = { viewModel.errorShown() }
+        )
+
     }
 }
