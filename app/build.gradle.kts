@@ -57,18 +57,15 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.constraintlayout)
     implementation(libs.timber)
-
-    implementation(libs.nav.fragment)
-    implementation(libs.nav.ui)
 
     //hilt
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
-    implementation(libs.compose.viewbinding)
     implementation(libs.compose.activity)
+    implementation(libs.compose.navigation)
+    implementation(libs.compose.hilt.navigation)
 
 
     testImplementation(libs.junit)
