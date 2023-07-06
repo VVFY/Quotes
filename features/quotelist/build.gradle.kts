@@ -50,12 +50,12 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
 
-    implementation(libs.nav.fragment)
-    implementation(libs.nav.ui)
-
     //hilt
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.compose.navigation)
+    implementation(libs.compose.hilt.navigation)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
